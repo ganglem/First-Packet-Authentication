@@ -1,0 +1,14 @@
+\section{Introduction}
+\label{sec:introduction}
+
+Cybersecurity is becoming more and more critical to any technology nowadays.  Data protection has shifted to become a crucial component of any service, as virtually everything is becoming completely digitalized, thus creating more and more vulnerabilities.\par
+
+Unauthorized access must be made practically impossible to ensure security and deter attacks.  Nevertheless, long before this information is extracted in an attack, the system needs to be breached.  Moreover, basic communication needs to occur between the system and the attacker even before that.  This first step must be as secure as possible, and for it to be ensured, there are many different approaches based on a similar foundation.\\\par
+
+As defined by MODINS, authentication "is the corroboration of a claimed set of attributes or facts with a specified or understood level of confidence" \cite{modins}. \par
+
+It all starts with the first packet sent to the target system.  The target system must not just accept anything that it receives.  A so-called zero trust approach in networking is the basis for that.  The zero trust, also called explicit trust, principle assumes that all network traffic is a threat until authorized, and all traffic needs to be validated.  Implicit trust means that devices should not be trusted by default, even in a supervised and trusted corporate network and even if previously verified.  Unlike implicit trust - "connect first, trust later" - the idea behind this security model is "never trust, always verify".\par
+
+Essential for the zero trust approach to be realized is that even in an unauthorized request, the system must ensure that no information about the system is disclosed.  Thus, no response shall be sent to the requestor at all.  Even a denied TCP connection reveals information about the nature of the network that can be gathered by attackers to later exploit weak points in the system.  However, First Packet Authentication is a mechanism to prevent that any kind of information about the network is disclosed in the first place \cite{7796146}.  The motivation for such an approach is to avoid host discovery.  The network essentially becomes a "black hole", emitting no information of any kind (not even a SYN/ACK packet) until the right to communicate with network resources is established, thus disclosing no information.\\\par
+
+This paper will outline the different approaches and use cases, ensuring that the very first communication between a server and client follows the Authentication principle of cybersecurity.  All of the following methods present the opportunity for First Packet Authentication to take place. Furthermore, it is evaluated whether the schemes resist common types of cyberattacks and if the foundation of the zero trust approach is sufficiently implemented.\\\par
